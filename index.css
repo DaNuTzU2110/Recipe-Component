@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+    font-family: 'Young Serif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+:root {
+    --font: 'Outfit', sans-serif;
+    --nutmeg: hsl(14, 45%, 36%);
+    --darkRasppberry: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --roseWhite: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --lightGrey: hsl(30, 18%, 87%);
+    --wengeBrown: hsl(30, 10%, 34%);
+    --darkCharcoal: hsl(24, 5%, 18%);
+    --firstFont: 'Outfit', sans-serif;
+    --secondFont: 'Young Serif', serif;
+}
+
+body {
+    background-color: var(--eggshell);
+    margin: 0;
+    padding: 0;
+    font-family: var(--firstFont);
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 639px;
+    height: 100%;
+    margin: 100px auto;
+    padding: 35px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    font-family: var(--secondFont);
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+.introduction {
+    font-family: var(--firstFont);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--wengeBrown);
+}
+
+.preparation {
+    background-color: var(--roseWhite);
+    border-radius: 10px;
+    margin-top: 35px;
+    padding: 20px;
+    margin-bottom: 35px;
+}
+
+.preparation-title {
+    color: var(--darkRasppberry);
+}
+
+.preparation-list {
+    color: var(--darkRasppberry) !important;
+    padding-left: 20px;
+}
+
+.preparation-list li {
+    list-style-type: none;
+    margin-bottom: 15px;
+    color: var(--wengeBrown);
+    text-indent: -.7em;
+}
+
+.preparation-list li:before {
+    content: "• ";
+    color: var(--darkRasppberry);
+    margin-right: 20px;
+}
+
+.preparation-list li span {
+    font-weight: 700;
+}
+
+.ingredients {
+    margin-bottom: 35px;
+}
+
+.ingredients-title {
+    font-family: var(--secondFont);
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--nutmeg);
+    margin-top: 35px;
+}
+
+.ingredients-list li {
+    list-style-type: none;
+    margin-bottom: 15px;
+    color: var(--wengeBrown);
+    text-indent: -2.2em;
+}
+
+.ingredients-list li:before {
+    content: "• ";
+    color: var(--nutmeg);
+    margin-right: 20px;
+}
+
+.instructions {
+    margin-bottom: 35px;
+}
+
+.instructions-title {
+    font-family: var(--secondFont);
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--nutmeg);
+    margin-top: 25px;
+}
+
+.instructions-list {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 45px;
+}
+
+.instructions-list li {
+    margin-bottom: 15px;
+    color: var(--wengeBrown);
+    text-indent: -2.4em;
+}
+
+.instructions-list li span {
+    font-weight: 700;
+}
+
+.instructions-list li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+    color: var(--darkRasppberry);
+    margin-right: 20px;
+}
+
+.nutrition {
+    margin-bottom: 10px;
+}
+
+.nutrition-title {
+    font-family: var(--secondFont);
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--nutmeg);
+    margin-top: 35px;
+}
+
+.nutrition-text {
+    color: var(--wengeBrown);
+    margin-bottom: 20px;
+}
+
+.nutrition-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+
+.nutrition-table td {
+    padding: 14px;
+    text-align: left;
+    color: var(--nutmeg);
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+.nutrition-table tr:last-child td:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.nutrition-table td:first-child {
+    color: var(--wengeBrown);
+    padding-left: 30px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 375px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .image {
+        border-radius: 0;
+    }
+
+    .title {
+        padding-left: 20px
+    }
+
+    .introduction {
+        padding: 0 20px
+    }
+
+    .preparation {
+        margin: 35px 25px;
+    }
+
+    .ingredients {
+        padding: 0 25px;
+    }
+
+    .ingredients-list li {
+        font-size: 14px;
+        max-width: 250px;
+    }
+
+    .instructions {
+        padding: 0 25px;
+    }
+
+    .nutrition {
+        padding: 0 25px;
+    }
+
+    hr {
+        margin: 0 25px;
+    }
+}
